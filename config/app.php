@@ -140,6 +140,7 @@ return [
         /*
          * Application Service Providers...
          */
+        Cornford\Googlmapper\MapperServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
@@ -159,6 +160,7 @@ return [
 
     'aliases' => [
 
+        'Mapper'    => Cornford\Googlmapper\Facades\MapperFacade::class,
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
         'Auth'      => Illuminate\Support\Facades\Auth::class,
