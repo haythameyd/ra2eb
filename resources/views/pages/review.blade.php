@@ -31,14 +31,14 @@
       </div>
       </form>
   </div>
-  <div class='col-md-6'> <h1 style='color:#777777;' class='text-center'>مشاريع محافظة {{$city}}</h1><hr>";
+  <div class='col-md-6'> <h1 style='color:#777777;' class='text-center'>مشاريع محافظة {{$city_ar}}</h1><hr>
     @foreach ($proj_res as $projects)
-        <div class='col-md-4'>
+        <div class='col-md-4' style="height:350px;">
           <div class='thumbnail text-center'>
             <img src='{{$projects->icon}}' alt='{{$projects->prj_name}}' class='img-rounded img-responsive' height='200' width='300'>
             <div class='caption'>
-            <h4>{{$projects->prj_name}}</h4>
-            <p>{{$projects->long_desc}}</p>
+            <h4>{{substr($projects->prj_name, 0,140)}}</h4>
+            <p>{{substr($projects->long_desc, 0,140)}}</p>
               <!-- show_rev_simple($row['rating_count'],$row['rating_total']); -->
             <button class='btn btn-success' data-toggle='modal' data-target='#Modal_{{$projects->proj_id}}'>قيم المشروع</button>
             </div>
@@ -51,24 +51,25 @@
             <div class='modal-content'>
               <div class='modal-header'>
               <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-              <h4 class='modal-title' id='myModalLabel".$row['proj_id']."'>مشروع {{$projects->prj_name}}"</h4>
+              <h4 class='modal-title' id='myModalLabel{{$projects->proj_id}}'>مشروع {{$projects->prj_name}}"</h4>
               </div>
               <div class='modal-body'>
-              <img class='img-responsive img-center img-rounded' src='".$row['icon']."' alt='".substr($row['prj_name'], 0,20)."' height='200' width='300'>
+              <img class='img-responsive img-center img-rounded' src='{{$projects->icon}}' alt='{{substr($projects->prj_name, 0,20)}}' height='200' width='300'>
               <p>{{$projects->long_desc}}</p>
                 <!--show_rev_simple($row['rating_count'],$row['rating_total']); -->
               <div class='pull-left' style='font-size:10pt;'><span class='glyphicon glyphicon-paperclip' style='font-size:10pt;color:#f0ad4e;'></span>&nbsp
               @if($projects->attach==="")
-              {
-                <p>لا يوجد تقارير</p>
-              }
+
+                لا يوجد تقارير
+
               @else
-              {
+
                 <a href='{{$projects->attach}}' target='_blank'>تفاصيل المشروع</a>
-              }
+
               @endif
               </div>
-              <br>
+            <br>
+
               <hr>
               <form action='review.php' method='post'>
                 <p>قم بتقييم الخدمات المقدمة من المشروع من 1-5 حسب: جودة الخدمة, ملائمة الخدمه, سهولة الوصول اليها</p>
@@ -102,7 +103,7 @@
             </div>
           </div>
         </div>
-      
+
     @endforeach
     </div>
 @stop
