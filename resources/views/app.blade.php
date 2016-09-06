@@ -86,16 +86,17 @@
 
 	@endif
 
-	@yield('body')
+	   @yield('body')
 
 
     <!-- Footer
     ================================================== -->
+    <div class="row container">
     <footer class="footer text-center">
         <h6>جميع الحقوق محفوظة . مبادرة راقب . 2014 | Copyrights Reserved . Ra2eb initiative . 2014</h6>
 		<h6><a href="faq.html" target="_blank">اسئلة شائعة</a> | <a href="sitemap.html" target="_blank">خريطة الموقع</a> | <a href="review/privacy.html" target="_blank">سياسة الخصوصية</a></h6>
     </footer>
-
+    </div>
     @yield('footerscript')
 
 
