@@ -83,7 +83,7 @@ return array(
     | location.
     |
     */
-    'locate' => true,
+    'locate' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -205,7 +205,7 @@ return array(
         | The grid size of a cluster in pixels.
         |
         */
-        'grid' => 60,
+        'grid' => 70,
 
         /*
         |--------------------------------------------------------------------------
@@ -215,7 +215,7 @@ return array(
         | The maximum zoom level that a marker can be part of a cluster.
         |
         */
-        'zoom' => null,
+        'zoom' => 9,
 
         /*
         |--------------------------------------------------------------------------

@@ -1,17 +1,18 @@
 @extends('app')
 
 @section('title')
-<title>Ra2eb . راقب 
+<title>Ra2eb . راقب
 	| الصفحة الرئيسية</title>
 @stop
 
 @section('body')
 
 <div class="map-container">
-		<iframe title="مشروعات الخطة" src="https://mapsengine.google.com/map/embed?mid=zd4Pnh74js9Q.kucBCDsiW3As" height="550" width="100%" frameBorder="0"><h1><a href="https://mapsengine.google.com/map/embed?mid=zd4Pnh74js9Q.kucBCDsiW3As">خريطة المشروعات المصريه - راقب</a></h1></iframe>
+		<!-- <iframe title="مشروعات الخطة" src="https://mapsengine.google.com/map/embed?mid=zd4Pnh74js9Q.kucBCDsiW3As" height="550" width="100%" frameBorder="0"><h1><a href="https://mapsengine.google.com/map/embed?mid=zd4Pnh74js9Q.kucBCDsiW3As">خريطة المشروعات المصريه - راقب</a></h1></iframe> -->
+	{!! Mapper::render() !!}
 	</div>
-	
-	<!-- About Us 
+
+	<!-- About Us
 	================================================== -->
 	<a id="about" class="anchor"></a>
 	<div class="about-us-container">
@@ -53,8 +54,8 @@
 		</div>
 		</div>
 	</div>
-	
-	<!-- Reports 
+
+	<!-- Reports
 	================================================== -->
 	<a id="reports" class="anchor"></a>
 	<div class="row reports-container">
@@ -83,12 +84,12 @@
 					</span>
 				</div>
 			</form>
-			
+
 		</div>
-			
+
 	</div>
-	
-	<!-- Contact Us 
+
+	<!-- Contact Us
 	================================================== -->
 	<a id="contact" class="anchor"></a>
 	<div class="contact-us-container">
@@ -133,14 +134,14 @@
 		      <span class="input-group-btn">
 		        <button class="btn btn-warning" type="submit" title="اشترك" name="subscribe" id="mc-embedded-subscribe"><span class="color-b">اشترك في القائمة البريدية</span></button>
 		      </span>
-		      
+
 		    </div>
 		</form>
 		</div>
 		</div>
 	</div>
-	
-	<!-- Videos 
+
+	<!-- Videos
 	================================================== 	-->
 	<a id="videos" class="anchor"></a>
 	<div class="row videos-container">
@@ -158,7 +159,7 @@
 @section('footerscript')
 
 <!-- Modal Organizational Report -->
-   
+
 
 		<div class="modal fade bs-example-modal-sm" id="organization" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
 			<div class="modal-dialog">
@@ -188,7 +189,7 @@
 		</div>
 
 	<!-- Modal Know How -->
-   
+
 
 		<div class="modal fade bs-example-modal-lg" id="knowhow1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
 			<div class="modal-dialog">
